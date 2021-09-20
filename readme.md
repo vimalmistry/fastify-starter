@@ -1,6 +1,9 @@
 # Fastify Starter [Api only]
 
-### Goal
+### Features
 
 -  Fastify boilerplate
--  Prisma.js
+-  Structured directories
+-  Essential plugin loaded
+-  Prisma.js configured
+-  Sample routes & controller code added.
