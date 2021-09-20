@@ -1,0 +1,27 @@
+{
+  "name": "fastify-starter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:vimalmistry/fastify-starter.git",
+  "author": "Vimal Mistry <vimalmistry10@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "tsc-watch --onSuccess 'node ./build/index.js' ",
+    "prod": "NODE_ENV=production node ./build/index.js",
+    "prisma": "prisma generate"
+  },
+  "_moduleAliases": {
+    "@Bin": "build/Bin",
+    "@Controllers": "build/Controllers",
+    "@Middlewares": "build/Middlewares",
+    "@Services": "build/Services"
+  },
+  "devDependencies": {
+    "@types/node": "^16.9.4",
+    "@typescript-eslint/eslint-plugin": "^4.31.1",
+    "@typescript-eslint/parser": "^4.31.1",
+    "eslint": "^7.32.0",
+    "tsc-watch": "^4.5.0",
+    "typescript": "^4.4.3"
+  }
+}

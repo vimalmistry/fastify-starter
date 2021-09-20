@@ -1,0 +1,9 @@
+{
+   "printWidth": 80,
+   "trailingComma": "all",
+   "tabWidth": 3,
+   "semi": true,
+   "singleQuote": false,
+   "importOrder": ["^@core/(.*)$", "^@server/(.*)$", "^@ui/(.*)$", "^[./]"],
+   "importOrderSeparation": true
+}
