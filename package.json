@@ -1,27 +1,45 @@
 {
-  "name": "fastify-starter",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "git@github.com:vimalmistry/fastify-starter.git",
-  "author": "Vimal Mistry <vimalmistry10@gmail.com>",
-  "license": "MIT",
-  "scripts": {
-    "dev": "tsc-watch --onSuccess 'node ./build/index.js' ",
-    "prod": "NODE_ENV=production node ./build/index.js",
-    "prisma": "prisma generate"
-  },
-  "_moduleAliases": {
-    "@Bin": "build/Bin",
-    "@Controllers": "build/Controllers",
-    "@Middlewares": "build/Middlewares",
-    "@Services": "build/Services"
-  },
-  "devDependencies": {
-    "@types/node": "^16.9.4",
-    "@typescript-eslint/eslint-plugin": "^4.31.1",
-    "@typescript-eslint/parser": "^4.31.1",
-    "eslint": "^7.32.0",
-    "tsc-watch": "^4.5.0",
-    "typescript": "^4.4.3"
-  }
+   "name": "fastify-starter",
+   "version": "1.0.0",
+   "main": "index.js",
+   "repository": "git@github.com:vimalmistry/fastify-starter.git",
+   "author": "Vimal Mistry <vimalmistry10@gmail.com>",
+   "license": "MIT",
+   "scripts": {
+      "dev": "yarn build && tsc-watch --onSuccess 'node ./build/index.js' ",
+      "prod": "NODE_ENV=production node ./build/index.js",
+      "build": "rimraf build && tsc -p tsconfig.json",
+      "clean": "rm -rf build",
+      "prisma": "prisma generate"
+   },
+   "_moduleAliases": {
+      "@Bin": "build/Bin",
+      "@Controllers": "build/Controllers",
+      "@Middlewares": "build/Middlewares",
+      "@Services": "build/Services"
+   },
+   "devDependencies": {
+      "@types/node": "^16.9.4",
+      "@typescript-eslint/eslint-plugin": "^4.31.1",
+      "@typescript-eslint/parser": "^4.31.1",
+      "eslint": "^7.32.0",
+      "prisma": "3.0.2",
+      "tsc-watch": "^4.5.0",
+      "typescript": "^4.4.3"
+   },
+   "dependencies": {
+      "@prisma/client": "3.0.2",
+      "fastify": "^3.21.3",
+      "fastify-autoload": "^3.9.0",
+      "fastify-compress": "^3.6.0",
+      "fastify-cors": "^6.0.2",
+      "fastify-env": "^2.1.1",
+      "fastify-plugin": "^3.0.0",
+      "fastify-sensible": "^3.1.1",
+      "fastify-swagger": "^4.12.0",
+      "fluent-json-schema": "^3.0.1",
+      "middie": "^5.3.0",
+      "module-alias": "^2.2.2",
+      "pino-pretty": "^7.0.1"
+   }
 }
