@@ -1,4 +1,5 @@
-import FastifyApp from "fastify";
+import FastifyApp, { fastify } from "fastify";
+
 import FastifyAutoload from "fastify-autoload";
 import { db } from "./Prisma";
 import { join } from "path";
@@ -10,9 +11,12 @@ export default async function runApp() {
    db.$connect();
 
    const app = await bootstrap();
+
    try {
       await app.listen(process.env.PORT || 3000);
-      // console.log({ routes: fastify.route });
+      if (app.inDev) {
+         console.log({ routes: app.route });
+      }
    } catch (err) {
       app.log.error(err);
       process.exit(1);

@@ -1,5 +1,7 @@
+import { FastifyInstance } from "fastify";
+
 export default class Controller {
-   constructor() {
+   constructor(protected fastify: FastifyInstance) {
       // Get all defined class methods
       const methods = Object.getOwnPropertyNames(Object.getPrototypeOf(this));
 

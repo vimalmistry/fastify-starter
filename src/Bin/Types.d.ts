@@ -19,3 +19,16 @@ export type RequestHandler = (
       unknown
    >,
 ) => void;
+
+export type RequestHandler = (
+   req: FastifyRequest<RouteGenericInterface, Server, IncomingMessage>,
+   res: FastifyReply<
+      Server,
+      IncomingMessage,
+      ServerResponse,
+      RouteGenericInterface,
+      unknown
+   >,
+   next:()=>void
+) => void;
+

@@ -7,6 +7,8 @@ export default class MainController extends Controller {
     * Sample Home Request
     */
    home: RequestHandler = (req, res) => {
+      console.log(this.fastify);
+
       res.send(`${req.url} home page.`);
    };
    /**
