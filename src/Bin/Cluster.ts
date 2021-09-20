@@ -1,7 +1,7 @@
 import cluster from "cluster";
 import os from "os";
 
-const CLUSTER_COUNT = 0; // os.cpus().length;
+const CLUSTER_COUNT = process.env.CLUSER_COUNT || 0; // os.cpus().length;
 
 export default (cb: () => void) => {
    if (CLUSTER_COUNT <= 0) {

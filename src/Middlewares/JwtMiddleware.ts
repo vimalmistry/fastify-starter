@@ -10,8 +10,9 @@ export default (fastify: FastifyInstance): RequestHandler => {
          );
          console.log("jwt payload..", req.payload);
          return;
-      } catch (error) {
+      } catch (e) {
          return res.unauthorized();
+         throw new Error("Abort");
       }
    };
 };

@@ -15,7 +15,7 @@ async function EnvLoader(fastify: FastifyInstance) {
          .valueOf(),
    });
    // environment checker
-   fastify.decorate("inDev", fastify.config.NODE_ENV == "develpment");
+   fastify.decorate("inDev", fastify.config.NODE_ENV == "development");
 }
 
 export default Plugin(EnvLoader);

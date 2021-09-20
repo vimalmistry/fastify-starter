@@ -1,4 +1,6 @@
 node_modules
 build
+# temp upload files
+uploads
 # Keep environment variables out of version control
 .env
